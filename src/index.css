@@ -1,0 +1,104 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@import "tailwindcss";
+
+/* Tronica Mono */
+@font-face{
+  font-family: "Tronica Mono";
+  src: url("../src/assets/fonts/tronica-mono/Tronica Mono.woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Test Untitled Sans family */
+@font-face{
+  font-family: "Test Untitled Sans";
+  src: url("../src/assets/fonts/untitled-font-family/TestUntitledSans-Regular-BF664576c4080d1.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Test Untitled Sans";
+  src: url("../src/assets/fonts/untitled-font-family/TestUntitledSans-RegularItalic-BF664576c41a34a.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Test Untitled Sans";
+  src: url("../src/assets/fonts/untitled-font-family/TestUntitledSans-Light-BF664576c40f710.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Test Untitled Sans";
+  src: url("../src/assets/fonts/untitled-font-family/TestUntitledSans-LightItalic-BF664576c3f40a6.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Test Untitled Sans";
+  src: url("../src/assets/fonts/untitled-font-family/TestUntitledSans-Medium-BF664576c414505.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Test Untitled Sans";
+  src: url("../src/assets/fonts/untitled-font-family/TestUntitledSans-MediumItalic-BF664576c428ddc.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Test Untitled Sans";
+  src: url("../src/assets/fonts/untitled-font-family/TestUntitledSans-Bold-BF664576c3d01a7.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Test Untitled Sans";
+  src: url("../src/assets/fonts/untitled-font-family/TestUntitledSans-BoldItalic-BF664576c4430eb.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Test Untitled Sans";
+  src: url("../src/assets/fonts/untitled-font-family/TestUntitledSans-Black-BF664576c3cc132.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Test Untitled Sans";
+  src: url("../src/assets/fonts/untitled-font-family/TestUntitledSans-BlackItalic-BF664576c40273c.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* CSS variables for font-family usage */
+@theme{
+  --font-TronicaMono: "Tronica Mono", ui-monospace, SFMono-Regular, sans-serif;
+  --font-untitledSans: "Test Untitled Sans", ui-monospace, SFMono-Regular, sans-serif;
+}

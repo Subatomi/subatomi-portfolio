@@ -1,0 +1,8 @@
+export default function MyWork() {
+  return (
+    <main className="flex flex-col items-center justify-center h-screen">
+
+
+    </main>
+  )
+}
