@@ -1,7 +1,7 @@
 export const config = {
     developer:{
-        name: "Theodore",
-        fullname: "Theodore A. Ladera",
+        name: "Theodore",   
+        fullname: "THEODORE A. LADERA",
         title: "Aspiring Software Developer | Web Developer | Applied AI Enthusiast",
     },
     social:{
@@ -10,25 +10,29 @@ export const config = {
         location: "Cebu, Philippines",
     },
     about:{
-        title: "About Me",
-        description: "I am a passionate and driven aspiring software developer with a strong interest in web development and applied AI. With a solid foundation in programming languages such as JavaScript, Python, and Java, I am eager to contribute my skills and knowledge to create solutions. I am constantly seeking opportunities to learn and grow in the field of software development, and I am excited to embark on a career that allows me to make an impact in society."
+        position: "Computer Science Student",
+        workplace: "Cebu Institute of Technology - University",
+        description: "I’m focused on building real-world software while continuously improving my skills in full-stack development, machine learning, and modern software engineering."
     },
     achievements:[
         {
+            id: 5,
             title: "13th TOPCIT Level III Industry Standard",
             fulltitle:"Level III Industry Standard - 13th Test of Practical Competency in IT. (TOPCIT)",
             date: "Jan 2026",
-            description: "Achieved Level III Industry Standard in the 13th Test of Practical Competency in IT (TOPCIT), demonstrating a high level of proficiency and practical skills in the field of information technology and the ability to maintain TOPCIT Level III Industry Standard for 2 years."
+            description: "Maintained my Level III Industry Standard in the 13th Test of Practical Competency in IT (TOPCIT)"
         },
 
         {
+            id: 4,
             title: "AWS Cloud Architecting - Training Badge",
             fulltitle:"AWS Academy Graduate - Cloud Architecting - Training Badge", 
             date: "Sep 2025",
-            description: "Achieved AWS Academy Graduate - Cloud Architecting - Training Badge, demonstrating a solid foundation in cloud computing principles and practices."
+            description: "Achieved AWS Academy Graduate - Cloud Architecting - Training Badge, demonstrating a solid foundation in cloud computing architecting and practices."
         },
         
         {
+            id: 3,
             title: "PhilNITS FE Certification",
             fulltitle:"PhilNITS Fundamental Information Technology Engineers (FE) Certification",
             date: "Nov 2025",
@@ -36,13 +40,15 @@ export const config = {
         },
 
         {
+            id: 2,
             title: "AWS Cloud Foundations - Training Badge",
             fulltitle:"AWS Academy Graduate - Cloud Foundations - Training Badge",
             date: "Nov 2025",
-            description: "Achieved AWS Academy Graduate - Cloud Foundations - Training Badge, demonstrating a solid foundation in cloud computing principles and practices."
+            description: "Achieved AWS Academy Graduate - Cloud Foundations - Training Badge, demonstrating a solid foundation in cloud."
         },
 
         {
+            id: 1,
             title: "12th TOPCIT Level III Industry Standard",
             fulltitle:"Level III Industry Standard - 12th Test of Practical Competency in IT. (TOPCIT)",
             date: "Jul 2025",
