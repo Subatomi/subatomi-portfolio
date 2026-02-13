@@ -12,6 +12,7 @@
   --color-orange: #cc6033;
   --color-sand: #d6995c;
   --color-coral: #ea4884;
+  --color-graybackground: #363636;
   --animate-orbit: orbit 50s linear infinite;
   @keyframes orbit {
     0% {
@@ -221,7 +222,11 @@ body {
 @theme{
   --font-TronicaMono: "Tronica Mono", ui-monospace, SFMono-Regular, sans-serif;
   --font-untitledSans: "Test Untitled Sans", ui-monospace, SFMono-Regular, sans-serif;
-  --border-graybackground: #282C33;
+  --border-graybackground: #363636;
 }
 
-
+/* hide page scrollbar */
+html { scrollbar-width: none; } /* Firefox */
+body { -ms-overflow-style: none; } /* IE and Edge */
+body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Chrome */
+/* end hide page scrollbar */

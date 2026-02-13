@@ -2,7 +2,7 @@ import { config } from "../../../config";
 
 export default function Contact() {
     return(
-        <div className="w-full min-h-dvh ">
+        <div className="w-full min-h-screen ">
 
             <div className="w-full flex flex-col mt-24 p-24 items-center">
                 <h1 className="text-8xl font-untitledSans w-full font-bold text-left mb-10">   {config.developer.fullname}

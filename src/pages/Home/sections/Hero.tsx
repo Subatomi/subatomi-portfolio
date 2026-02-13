@@ -5,7 +5,7 @@ export default function Hero() {
 
     return (
         <div className="flex w-full  min-h-dvh flex-col justify-center items-start mt-24">
-            <div className="flex flex-row justify-around items-center w-full h-full ">        
+            <div className="pt-10 flex flex-row justify-around items-center w-full h-full ">        
                 <div className="flex flex-col font-TronicaMono justify-start -translate-y-30 translate-x-30">
                     <h2 className="text-left text-2xl">
                     HELLO I'M
