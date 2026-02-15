@@ -1,18 +1,22 @@
 import { motion } from "motion/react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
-function Navigation() {
+type NavigationProps = {
+    onNavigateTo: (id: string) => void;
+};
+
+function Navigation({ onNavigateTo }: NavigationProps) {
     return (
-        <ul className="nav-ul  ">
+        <ul className="nav-ul font-bold">
             <li className="nav-li">
-                <Link className="nav-link" to="/about">ABOUT</Link>
+                <button className="nav-link cursor-pointer" onClick={() => onNavigateTo('techstack')}>ABOUT</button>
             </li>
             <li className="nav-li">
                 <Link className="nav-link" to="/MyWorks">WORKS</Link>
             </li>
             <li className="nav-li">
-                <Link className="nav-link" to="/contact">CONTACT</Link>
+                <button className="nav-link cursor-pointer" onClick={() => onNavigateTo('contact')}>CONTACT</button>
             </li>
         </ul>
     );
@@ -21,11 +25,26 @@ function Navigation() {
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    function scrollToId(id: string) {
+        if (location.pathname === '/' || location.pathname === '/Home') {
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return;
+        }
+
+        navigate('/Home', { state: { scrollTo: id } });
+    }
 
     return (
-        <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/40 p-6 sm:p-4">
+        <div className="fixed inset-x-0 z-100 w-full backdrop-blur-lg bg-primary/40 p-6 sm:p-4">
             <div className="mx-auto c-space max-w-7xl flex items-center justify-between py-2 sm:py-0">
-                <a className="text-xl font-bold transition-colors text-neutral-400 hover:text-white" href="/">LOGO</a>
+                
+                <a className="text-xl font-bold transition-colors text-neutral-400 hover:text-white" href="/Home">
+                    <img src="public/assets/LogoWhite.svg" alt="Logo" className="text-white w-8 h-8 mr-2" />
+                </a>
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
@@ -37,7 +56,7 @@ export default function NavBar() {
                     />
                 </button>
                 <nav className="hidden sm:flex">
-                    <Navigation />
+                    <Navigation onNavigateTo={scrollToId} />
                 </nav>
             </div>
             {isOpen && (
@@ -46,31 +65,11 @@ export default function NavBar() {
                     transition={{ duration: 1 }}
                 >
                     <nav className="z-50 text-white">
-                        <Navigation />
+                        <Navigation onNavigateTo={scrollToId} />
                     </nav>
                 </motion.div>
             )}
 
-            {/* <div className="flex items-center gap-10">
-                <a href="/#" className="text-lg">Logo</a>
-                <a 
-                        href="mailto:theodoreladera.tl@gmail.com"
-                    >
-                    theodoreladera.tl@gmail.com
-                </a>
-            </div>
-
-            <ul className="flex flex-row gap-10">
-                <li>
-                    <a href="#about">ABOUT</a>
-                </li>
-                <li>
-                    <a href="#works">WORKS</a>
-                </li>
-                <li>
-                    <a href="#contact">CONTACT</a>
-                </li>
-            </ul> */}
         </div>
     )
 }

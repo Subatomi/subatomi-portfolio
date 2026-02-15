@@ -10,7 +10,7 @@ export default function TechStack() {
         }, [])
 
     return (
-        <div className="max-w-screen h-full mt-20 grid grid-cols-1 lg:grid-cols-2 justify-between sm:p-20 gap-20 ">
+        <section id="techstack" className="max-w-screen h-full mt-20 grid grid-cols-1 lg:grid-cols-2 justify-between sm:p-20 gap-20 ">
             <div className="flex flex-col justify-around w-full">
                 <div className="flex flex-col h-full justify-items-start">
                     <h1 data-animation="fade-in" className="text-5xl font-untitledSans font-bold text-left mb-10">About Me</h1>
@@ -86,6 +86,6 @@ export default function TechStack() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }   

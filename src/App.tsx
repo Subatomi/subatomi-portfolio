@@ -1,16 +1,22 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home/Home.tsx'
-import MyWorks from './pages/MyWorks/MyWork.tsx'
+import { lazy, Suspense } from 'react';
+
+const InitialPage = lazy(() => import('./pages/Loading/InitialPage'));
+const Home = lazy(() => import('./pages/Home/Home'));
+const MyWorks = lazy(() => import('./pages/MyWorks/MyWork'));
 
 export default function App() {
   return (
     <main>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/MyWorks" element={<MyWorks />} />
-          <Route path="*" element={<div>Page Not Found</div>} />
-        </Routes>
+
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<InitialPage />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/MyWorks" element={<MyWorks />} />
+          </Routes>
+          </Suspense>
       </BrowserRouter>
     </main>
   )

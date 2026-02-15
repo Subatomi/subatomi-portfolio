@@ -6,65 +6,68 @@ import ImageGrid from "./components/ImageGrid"
 import { Link } from "react-router-dom"
 
 export default function Works() {
+
     useEffect(() => {
         if (typeof window === "undefined") return;
+        let ctx = gsap.context(() => {
 
-        gsap.registerPlugin(ScrollTrigger);
+            gsap.registerPlugin(ScrollTrigger);
 
-        function initGsap() {
-        // match Tailwind `sm` breakpoint (640px)
-        if (window.innerWidth <= 640) {
-            ScrollTrigger.getAll().forEach(st => st.kill());
-            // reset any transforms GSAP may have applied
-            const panels = document.getElementsByClassName("panel");
-            for (let i = 0; i < panels.length; i++) {
-                const el = panels[i] as HTMLElement;
-                el.style.transform = "none";
-                el.style.transition = "none";
+            function initGsap() {
+            if (window.innerWidth <= 640) {
+                ScrollTrigger.getAll().forEach(st => st.kill());
+                const panels = document.getElementsByClassName("panel");
+                for (let i = 0; i < panels.length; i++) {
+                    const el = panels[i] as HTMLElement;
+                    el.style.transform = "none";
+                    el.style.transition = "none";
+                }
+                return;
             }
-            return;
-        }
 
-        const boxes = document.getElementsByClassName("panel");
-        if (!boxes.length) return;
+            const boxes = document.getElementsByClassName("panel");
+            if (!boxes.length) return;
 
-        const container = document.querySelector(".works-container")!;
-        const rectLeft = container.getBoundingClientRect().left;
-        const parentWidth = boxes[0].parentElement!.getBoundingClientRect().width;
-        const padding = parseInt(window.getComputedStyle(boxes[0]).padding) / 2;
+            const container = document.querySelector(".works-container")!;
+            const rectLeft = container.getBoundingClientRect().left;
+            const parentWidth = boxes[0].parentElement!.getBoundingClientRect().width;
+            const padding = parseInt(window.getComputedStyle(boxes[0]).padding) / 2;
 
-        const translateX = boxes[0].getBoundingClientRect().width * boxes.length - (rectLeft + parentWidth) + padding;
+            const translateX = boxes[0].getBoundingClientRect().width * boxes.length - (rectLeft + parentWidth) + padding;
 
-        gsap.to(".panel", {
-            x: -translateX,
-            ease: "none",
-            scrollTrigger: {
-            trigger: container,
-            start: "top top",
-            end: `+=${translateX}`,
-            scrub: 1,
-            pin: true,
-            pinSpacing: true,
-            id: "work",
-            invalidateOnRefresh: true,
-            // markers: true,
-            },
-        });
-        }
+            gsap.to(".panel", {
+                x: -translateX,
+                ease: "none",
+                scrollTrigger: {
+                trigger: container,
+                start: "top top",
+                end: `+=${translateX}`,
+                scrub: 1,
+                pin: true,
+                pinSpacing: true,
+                id: "work",
+                invalidateOnRefresh: true,
+                // markers: true,
+                },
+            });
+            }
 
-        initGsap();
+            initGsap();
 
-        const handleResize = () => {
-        ScrollTrigger.getAll().forEach(st => st.kill());
-        initGsap();
-        }
+            const handleResize = () => {
+            ScrollTrigger.getAll().forEach(st => st.kill());
+            initGsap();
+            }
 
-        window.addEventListener("resize", handleResize);
+            window.addEventListener("resize", handleResize);
 
-        return () => {
-        window.removeEventListener("resize", handleResize);
-        ScrollTrigger.getAll().forEach(st => st.kill());
-        }
+            return () => {
+            window.removeEventListener("resize", handleResize);
+            ScrollTrigger.getAll().forEach(st => st.kill());
+            }
+        })
+
+        return () => ctx.revert();
     }, [])
 
 

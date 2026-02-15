@@ -7,7 +7,7 @@ export default function Contact() {
 
     return(
         
-        <div className="w-full min-h-screen pb-40  sm:pb-0">
+        <div id="contact" className="w-full min-h-screen pb-40  sm:pb-0">
 
             <div className="w-full flex flex-col sm:mt-24 sm:p-24 items-center p-8 mt-12">
                 <h1 data-animation="fade-in" className="sm:text-8xl font-untitledSans w-full font-bold text-left mb-10 max-text-4xl">   {config.developer.fullname}
