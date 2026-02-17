@@ -37,7 +37,7 @@ export default function Hero() {
                 full-stack development and machine learning.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 items-center  justify-center gap-4">
+            <div className="grid grid-cols-1 items-center  justify-center gap-4">
                 
                 {/* <div data-animation="fade-in" className="w-full">
                     <a 
