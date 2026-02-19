@@ -63,7 +63,14 @@ export default function Achievements() {
                 {config.achievements.map((achievement) => (
                     <div key={achievement.id} data-animation="fade-in" className="p-4 bg-white/5 border border-white/10 rounded-lg">
                         <div className="flex items-center justify-between">
-                            <div className="font-bold text-lg">{achievement.title}</div>
+                            <div className="flex flex-col gap-1 font-bold text-lg text-white">
+                                {achievement.title}
+                                {achievement.link && (
+                                    <a href={achievement.link} target="_blank" rel="noopener noreferrer" className="text-xs text-white/40 hover:underline">
+                                        View Credential 
+                                    </a>
+                                )}
+                            </div>
                             <div className="text-center">
                                 <div className="font-bold text-2xl">{achievement.year}</div>
                                 <div className="font-extralight text-white/70 text-sm">{achievement.month}</div>
@@ -79,8 +86,14 @@ export default function Achievements() {
                 <div className="grid grid-cols-1 sm:col-span-2 gap-10">
                     {config.achievements.map((achievement) => (
                     <div  data-animation="fade-in" className="grid grid-cols-1 sm:grid-cols-2 justify-between gap-2" id={`achievement-${achievement.id}`} key={`title-${achievement.id}`}>
-                                <div className="w-full font-bold text-xl">
+                                <div className="flex flex-col gap-1 font-bold text-xl text-white">
                                     {achievement.title}
+                                    
+                                    {achievement.link && (
+                                        <a href={achievement.link} target="_blank" rel="noopener noreferrer" className="text-xs text-white/40 hover:underline">
+                                            View Credential 
+                                        </a>
+                                    )}
                                 </div>
                                 <div className="w-full flex items-center justify-center">
                                     <div className="text-center flex flex-col">

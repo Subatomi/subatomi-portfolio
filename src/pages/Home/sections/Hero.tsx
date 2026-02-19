@@ -13,7 +13,7 @@ export default function Hero() {
     // })
 
     return (
-        <div className="flex w-full min-h-screen flex-col justify-center items-center sm:mt-0 mt-20 px-6 py-20">
+        <div className="flex w-full min-h-screen flex-col justify-center items-center sm:mt-0 mt-15 px-6 py-20">
             <div className="flex items-center gap-2 mb-8 bg-white/5 shadow-lg px-4 py-2 rounded-xl border border-white/20 backdrop-blur-md hover:-translate-y-1 transition-transform duration-300 hover:text-white text-gray-400">
                 <span className="relative flex size-3 mr-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
@@ -34,7 +34,7 @@ export default function Hero() {
 
             <p data-animation="fade-in" className="text-base sm:text-lg text-gray-400 text-center max-w-3xl mb-12">
                 Passionate about creating innovative solutions through code. Working in
-                full-stack development and machine learning.
+                full-stack development and a bit of machine learning.
             </p>
 
             <div className="grid grid-cols-1 items-center  justify-center gap-4">

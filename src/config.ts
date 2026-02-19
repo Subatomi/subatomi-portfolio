@@ -16,69 +16,59 @@ export const config = {
     },
     achievements:[
         {
-            id: 6,
+            id: 5,
             title: "13th TOPCIT Level III Industry Standard",
             fulltitle:"Level III Industry Standard - 13th Test of Practical Competency in IT. (TOPCIT)",
             month: "January",
             year: "2026",
             description: "Maintained my Level III Industry Standard in the 13th Test of Practical Competency in IT (TOPCIT)",
-            link:"",
+            link:"https://drive.google.com/file/d/1sxfdRIqtrjRifCVFlqXl75iTwsl4COvv/view?usp=sharing",
         },
 
         {
-            id: 5,
+            id: 4,
             title: "AWS Cloud Architecting - Training Badge",
             fulltitle:"AWS Academy Graduate - Cloud Architecting - Training Badge", 
             month: "September",
             year: "2025",
             description: "Achieved AWS Academy Graduate - Cloud Architecting - Training Badge, demonstrating a solid foundation in cloud computing architecting and practices.",
-            link:"",
+            link:"https://www.credly.com/badges/b5cc6e6f-0196-4eb5-9c26-bd9b92b5993d",
         },
         
         {
-            id: 4,
+            id: 3,
             title: "PhilNITS FE Certification",
             fulltitle:"PhilNITS Fundamental Information Technology Engineers (FE) Certification",
             month: "November",
             year: "2025",
             description: "Achieved PhilNITS Fundamental Information Technology Engineers (FE) Certification, demonstrating a solid foundation in information technology principles and practices.",
-            link:"",
+            link:"https://philnits.org/passers-fe/",
         },
 
         {
-            id: 3,
+            id: 2,
             title: "AWS Cloud Foundations - Training Badge",
             fulltitle:"AWS Academy Graduate - Cloud Foundations - Training Badge",
             month: "November",
             year: "2025",
             description: "Achieved AWS Academy Graduate - Cloud Foundations - Training Badge, demonstrating a solid foundation in cloud.",
-            link:"",
+            link:"https://www.credly.com/badges/80c70c2f-7c1d-4f2a-8b3e-5b8e5b8e5b8e",
         },
 
         {
-            id: 2,
+            id: 1,
             title: "12th TOPCIT Level III Industry Standard",
             fulltitle:"Level III Industry Standard - 12th Test of Practical Competency in IT. (TOPCIT)",
             month: "July",
             year: "2025",
             description: "Achieved Level III Industry Standard in the 12th Test of Practical Competency in IT (TOPCIT), for the first time.",
-            link:"",
+            link:"https://drive.google.com/file/d/1R7wMBxSsj3RPUcP1Qpf2wKSpwiTrCXHt/view?usp=sharing",
         },
-
-        {
-            id: 1,
-            title: "DOST-SEI Scholarship",
-            fulltitle:"Department of Science and Technology - Science Education Institute (DOST-SEI) Scholarship",
-            month: "February",
-            year: "2022",
-            description: "Recipient of the DOST–SEI Scholarship, awarded based on successful qualification and evaluation.",
-            link:"",
-        }
     ],
     projects:[
         {
             
-            id: 1,
+            id: 7,
             title: "Portfolio Website",
             category: ["Web Development / Personal Project"],
             technologies: ["Vite", "React", "TypeScript", "Tailwind CSS", "PhaserJS", "Firebase Authentication & Realtime Database", "Vercel"],
@@ -93,7 +83,7 @@ export const config = {
             repoLink: ["https://github.com/Subatomi/subatomi-portfolio"],
         },
         {
-            id: 2,
+            id: 6,
             title: "Probability Bomber",
             category: ["Web Development / Gamification / EdTech"],
             technologies: ["React Js", "PhaserJS", "Firebase Authentication and Database", "HTML", "CSS", "Tailwind"],
@@ -109,7 +99,7 @@ export const config = {
             repoLink: ["https://github.com/zyle-geralde/ProbabilityBomberFrontEnd", "https://github.com/avrilnigelchua0412/Probability-Bomber-Backend"],
         },
         {
-            id: 3,
+            id: 5,
             title: "SkillStacker",
             category: ["Web Development / Internship Project"],
             technologies: ["C#", ".NET 6.0", "Razor Pages", "Tailwind CSS", "Entity Framework Core", "SQL Server (SSMS)"],
@@ -125,7 +115,7 @@ export const config = {
             repoLink: ["Privated"],
         },
         {
-            id: 3,
+            id: 4,
             title: "Litterbox",
             category: ["Web Development / School Project"],
             technologies: ["Django", "Python", "Tailwind CSS", "SQLite", "JavaScript", "TinyMCE", "FullCalendar"],
@@ -138,7 +128,7 @@ export const config = {
         },
         
         {
-            id: 4,
+            id: 3,
             title: "TechnoSpace",
             category: ["Web Development / School Project"],
             technologies: ["ASP.NET", "ReactJS", "Azure", "MySQL", "HTML", "CSS", "Tailwind", "Bootstrap"],
@@ -157,7 +147,7 @@ export const config = {
         },
         
         {
-            id: 5,
+            id: 2,
             title: "Space Horizon",
             category: ["Game / School Project"],
             technologies: ["Java"],
@@ -172,7 +162,7 @@ export const config = {
         },
         
         {
-            id: 6,
+            id: 1,
             title: "BuriedBornes",
             category: ["Game / School Project"],
             technologies: ["Java"],

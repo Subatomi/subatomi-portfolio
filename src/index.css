@@ -46,6 +46,16 @@
     }
   }
 }
+
+html, body, #root {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 body {
   background: #121212;
   font-family: "Funnel Display", sans-serif;

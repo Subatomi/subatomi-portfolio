@@ -79,8 +79,8 @@ export default function Works() {
                 text-center sm:text-left">My Works</h1>
             </div>
             <div className="flex h-auto sm:h-10/12 flex-col sm:flex-row sm:overflow-hidden w-90 sm:w-full works-list">
-                {config.projects.slice(0,5).map((project, index) => (
-                      <div className="panel max-w-2xl w-full h-auto shrink-0 grid grid-cols-1 justify-between items-end sm:border-r-2 border-b-2 sm:border-b-0 border-graybackground px-6 sm:px-20 py-8 sm:py-15">
+                    {config.projects.slice(0,5).map((project, index) => (
+                        <div key={project.id || index} className="panel max-w-2xl w-full h-auto shrink-0 grid grid-cols-1 justify-between items-end sm:border-r-2 border-b-2 sm:border-b-0 border-graybackground px-6 sm:px-20 py-8 sm:py-15">
                         <div className="flex flex-col sm:flex-row justify-between w-full mb-5 gap-4">
                             <h3 className="text-3xl sm:!text-6xl font-bold w-fit h-fit text-left">0{index+1}</h3>
                             <div>
