@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import {tech} from "./config/tech-url"
 import ItemBox from "./components/item-box";
 import useTextAnimation from "../components/TextAnimation"
