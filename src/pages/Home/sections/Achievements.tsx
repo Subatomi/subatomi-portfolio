@@ -59,7 +59,7 @@ export default function Achievements() {
             <h1 className="text-4xl sm:text-6xl font-untitledSans font-bold text-left mb-10">ACHIEVEMENTS</h1>
 
             {/* Mobile list: simple stacked cards */}
-            <div className="w-full sm:hidden flex flex-col gap-6 mt-6" ref={sectionRef}>
+            <div className="w-full xl:hidden flex flex-col gap-6 mt-6" ref={sectionRef}>
                 {config.achievements.map((achievement) => (
                     <div key={achievement.id} data-animation="fade-in" className="p-4 bg-white/5 border border-white/10 rounded-lg">
                         <div className="flex items-center justify-between">
@@ -82,7 +82,7 @@ export default function Achievements() {
             </div>
 
             {/* Desktop timeline: visible on sm and up */}
-            <div className="hidden sm:grid career-timeline grid-cols-5 relative px-6 sm:px-20 mx-auto my-auto justify-around w-full h-full gap-20 mt-20" ref={sectionRef}>
+            <div className="hidden xl:grid career-timeline grid-cols-5 relative px-6 sm:px-20 mx-auto my-auto justify-around w-full h-full gap-20 mt-20" ref={sectionRef}>
                 <div className="grid grid-cols-1 sm:col-span-2 gap-10">
                     {config.achievements.map((achievement) => (
                     <div  data-animation="fade-in" className="grid grid-cols-1 sm:grid-cols-2 justify-between gap-2" id={`achievement-${achievement.id}`} key={`title-${achievement.id}`}>

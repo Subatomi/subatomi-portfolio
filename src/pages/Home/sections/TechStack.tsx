@@ -55,7 +55,7 @@ export default function TechStack() {
                 <div data-animation="fade-in" className="flex flex-col">
                     <h2 className="font-bold mb-2 text-center sm:text-left">Frontend</h2>
                     <div className="justify-center sm:justify-around flex flex-row w-full gap-4 flex-wrap">
-                        {Object.values(tech).slice(0,6).map((tech) => (
+                        {Object.values(tech.frontend).map((tech) => (
                             <ItemBox key={tech.name || tech.link || tech.logo} link={tech.link} name={tech.name} logo={tech.logo} />
                         ))}
                     </div>
@@ -65,7 +65,7 @@ export default function TechStack() {
                 <div data-animation="fade-in" className="flex flex-col">
                     <h2 className="font-bold mb-2 text-center sm:text-left">Backend</h2>
                     <div className="justify-center flex flex-row w-full gap-4 flex-wrap">
-                        {Object.values(tech).slice(6,9).map((tech) => (
+                        {Object.values(tech.backend).map((tech) => (
                             <ItemBox key={tech.name || tech.link || tech.logo} link={tech.link} name={tech.name} logo={tech.logo} />
                         ))}
                     </div>
@@ -75,7 +75,7 @@ export default function TechStack() {
                 <div data-animation="fade-in"className="flex flex-col">
                     <h2 className="font-bold mb-2 text-center sm:text-left">Databases</h2>
                     <div className="justify-center flex flex-row w-full gap-4 flex-wrap">
-                        {Object.values(tech).slice(9,12).map((tech) => (
+                        {Object.values(tech.databases).map((tech) => (
                             <ItemBox key={tech.name || tech.link || tech.logo} link={tech.link} name={tech.name} logo={tech.logo} />
                         ))}
                     </div>
@@ -85,7 +85,7 @@ export default function TechStack() {
                 <div data-animation="fade-in" className="flex flex-col pb-0 sm:pb-20 ">
                     <h2 className="font-bold mb-2 text-center sm:text-left">Tools</h2>
                     <div className="justify-center flex flex-row w-full gap-4 flex-wrap">
-                        {Object.values(tech).slice(12,15).map((tech) => (
+                        {Object.values(tech.tools).map((tech) => (
                             <ItemBox key={tech.name || tech.link || tech.logo} link={tech.link} name={tech.name} logo={tech.logo} />
                         ))}
                     </div>

@@ -1,4 +1,6 @@
+
 export default function ItemBox({link, name, logo}: {link: string, name: string, logo: string}) { 
+
     return (
         <a href={link} key={name} className="flex flex-col items-center justify-center 
         w-18 h-20 rounded-lg px-5 py-10 text-center text-[8px] 
