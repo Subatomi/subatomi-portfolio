@@ -29,7 +29,7 @@ export default function useTextAnimation() {
                             trigger: element,
                             start: smallViewportStart,
                             toggleActions: "play none none reverse",
-                            markers: true,
+                            // markers: true,
                         }
                     });
                 }
