@@ -92,11 +92,11 @@ export const tech = {
             logo: "/assets/tech-stack/supabase.svg",
             link: "https://supabase.com/"
         },
-        // mongoDB: {
-        //     name: "MongoDB",
-        //     logo: "/assets/tech-stack/mongodb.svg",
-        //     link: "https://www.mongodb.com/"
-        // },
+        mongoDB: {
+            name: "MongoDB",
+            logo: "/assets/tech-stack/mongodb.svg",
+            link: "https://www.mongodb.com/"
+        },
     },
     // Cloud
     clouds:{

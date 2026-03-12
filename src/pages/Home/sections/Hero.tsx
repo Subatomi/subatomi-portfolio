@@ -29,7 +29,7 @@ export default function Hero() {
             </TextRevealLeft>
 
             <p data-animation="fade-in" className="text-xl sm:text-2xl text-gray-400 text-center mb-8">
-                Full-Stack Developer and <br/>  <span className="text-white">Computer Science Student at Cebu Institute of Technology - University</span>
+                Aspiring Full-Stack Developer and <br/>  <span className="text-white">Computer Science Student at Cebu Institute of Technology - University</span>
             </p>
 
             <p data-animation="fade-in" className="text-base sm:text-lg text-gray-400 text-center max-w-3xl mb-12">
