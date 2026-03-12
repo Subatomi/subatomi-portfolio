@@ -13,11 +13,11 @@ export default function MyWork() {
           <h4>Showing {config.projects.length} projects</h4>
         </div>
 
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-10">
           {config.projects.map((project, index) => (
             <div
               key={project.id || index}
-              className="panel max-w-2xl w-full h-[650px] shrink-0 flex flex-col px-5 py-6"
+              className="panel max-w-2xl w-full shrink-0 flex flex-col px-5 py-6"
             >
               <div className="flex justify-between w-full mb-5 items-start">
                 <h3 className="text-4xl font-bold">{`0${index + 1}`}</h3>
@@ -46,7 +46,7 @@ export default function MyWork() {
                   </div>
                 )}
 
-                <p className="text-sm text-left text-white/70 line-clamp-3 overflow-hidden">{project.description}</p>
+                <p className="text-sm text-left text-white/70">{project.description}</p>
               </div>
 
               <div className="flex justify-end gap-5 mt-5 w-full shrink-0">
