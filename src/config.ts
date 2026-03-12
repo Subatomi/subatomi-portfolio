@@ -86,7 +86,7 @@ export const config = {
             id: 6,
             title: "Probability Bomber",
             category: ["Web Development / Gamification / EdTech"],
-            technologies: ["React Js", "PhaserJS", "Firebase Authentication and Database", "HTML", "CSS", "Tailwind"],
+            technologies: ["React Js", "PhaserJS", "Firebase", "Firestore", "HTML", "CSS", "Tailwind"],
             image: [
                 "./assets/works-images/pb_bomber_1.png",
                 "./assets/works-images/pb_bomber_2.png", 
@@ -102,7 +102,7 @@ export const config = {
             id: 5,
             title: "SkillStacker",
             category: ["Web Development / Internship Project"],
-            technologies: ["C#", ".NET 6.0", "Razor Pages", "Tailwind CSS", "Entity Framework Core", "SQL Server (SSMS)"],
+            technologies: ["C#", ".NET 6.0", "Razor Pages", "Tailwind CSS", "Entity Framework Core", "SQL Server"],
             image: [
                 "./assets/works-images/ss_1.png",
                 "./assets/works-images/ss_2.png",

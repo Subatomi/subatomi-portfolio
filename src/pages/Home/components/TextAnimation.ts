@@ -10,7 +10,7 @@ export default function useTextAnimation() {
             gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
             
             const elements = document.querySelectorAll('[data-animation]');
-            const smallViewportStart = (typeof window !== 'undefined' && window.innerHeight < 700) ? 'top 95%' : 'top 80%';
+            const smallViewportStart = (typeof window !== 'undefined' && window.innerHeight < 700) ? 'top 120%' : 'top 90%';
             
             elements.forEach((element) => {
                 const animType = (element as HTMLElement).dataset.animation;
@@ -29,7 +29,7 @@ export default function useTextAnimation() {
                             trigger: element,
                             start: smallViewportStart,
                             toggleActions: "play none none reverse",
-                            // markers: true,
+                            markers: true,
                         }
                     });
                 }

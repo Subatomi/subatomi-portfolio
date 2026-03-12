@@ -5,12 +5,6 @@ import { Link } from "react-router-dom";
 // import DrawSVGPlugin from "gsap/DrawSVGPlugin"
 
 export default function Hero() {
-    
-    // gsap.registerPlugin(DrawSVGPlugin);
-    
-    // useEffect(() => {
-
-    // })
 
     return (
         <div className="flex w-full min-h-screen flex-col justify-center items-center sm:mt-0 mt-15 px-6 py-20">
