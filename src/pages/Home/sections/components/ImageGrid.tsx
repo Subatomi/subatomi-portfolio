@@ -28,14 +28,14 @@ export default function ImageGrid({ project, isHome = false }: Props) {
   if (isHome && images.length > 0) {
     const imagesToShow = images.slice(0, 1)
     return (
-      <>
-        <div className="w-full h-80">
+      <div className="w-full h-full">
+        <div className="w-full h-full">
           {imagesToShow.map((src, i) => (
             <img
               key={i}
               src={src}
               alt={project.title}
-              className="cursor-pointer w-full h-64 object-cover rounded-lg"
+              className="cursor-pointer w-full h-full object-cover rounded-lg"
               onClick={() => openLightbox(i)}
             />
           ))}
@@ -48,7 +48,7 @@ export default function ImageGrid({ project, isHome = false }: Props) {
             onClose={() => setLightboxOpen(false)}
           />
         )}
-      </>
+      </div>
     )
   }
 
@@ -57,7 +57,7 @@ export default function ImageGrid({ project, isHome = false }: Props) {
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-2 h-80">
+      <div className="grid grid-cols-2 gap-2 w-full h-full">
         {visible.map((src, i) => {
           const showOverlay = count > 4 && i === 3
           const overlayText = showOverlay ? `+${count - 4}` : null

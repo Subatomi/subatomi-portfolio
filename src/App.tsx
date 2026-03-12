@@ -9,13 +9,12 @@ export default function App() {
   return (
     <main>
       <BrowserRouter>
-
         <Suspense>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/MyWorks" element={<MyWorks />} />
           </Routes>
-          </Suspense>
+        </Suspense>
       </BrowserRouter>
     </main>
   )

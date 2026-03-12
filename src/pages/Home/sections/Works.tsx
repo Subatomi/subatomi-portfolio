@@ -80,20 +80,42 @@ export default function Works() {
             </div>
             <div className="flex h-auto sm:h-10/12 flex-col sm:flex-row sm:overflow-hidden w-90 sm:w-full works-list">
                     {config.projects.slice(0,5).map((project, index) => (
-                        <div key={project.id || index} className="panel max-w-2xl w-full h-auto shrink-0 grid grid-cols-1 justify-between items-end sm:border-r-2 border-b-2 sm:border-b-0 border-graybackground px-6 sm:px-20 py-8 sm:py-15">
-                        <div className="flex flex-col sm:flex-row justify-between w-full mb-5 gap-4">
+                        <div key={project.id || index} className="panel max-w-2xl w-full h-auto sm:min-h-screen shrink-0 flex flex-col sm:border-r-2 border-b-2 sm:border-b-0 border-graybackground px-6 sm:px-20 py-8 sm:py-15">
+                        {/* Header Section */}
+                        <div className="flex flex-col sm:flex-row justify-between w-full mb-5 gap-4 shrink-0">
                             <h3 className="text-3xl sm:!text-6xl font-bold w-fit h-fit text-left">0{index+1}</h3>
                             <div>
                                 <h4 className="text-xl sm:text-4xl font-bold">{project.title}</h4>
                                 <p className="text-sm text-white/60 font-extralight">{project.category}</p>
                             </div>
                         </div>
-                        <ImageGrid project={project} isHome={true} /> 
-                        <div>
-                            <p className="text-sm mt-5 text-left sm:text-right text-white/70">{project.description}</p>
+                        
+                        {/* Image Section - Fixed */}
+                        <div className="h-64 shrink-0 mb-5">
+                          <ImageGrid project={project} isHome={true} />
+                        </div>
+                        
+                        {/* Content Section - Flexible */}
+                        <div className="flex-1 flex flex-col overflow-hidden mb-4">
+                            <p className="text-sm text-white font-bold shrink-0">Technology Used:</p>
+                            {project.technologies && project.technologies.length > 0 && (
+                              <div className="mt-2 flex flex-wrap gap-2 justify-start sm:justify-end mb-3 shrink-0">
+                                {project.technologies.map((tech, idx) => (
+                                  <span
+                                    key={idx}
+                                    className="text-xs bg-white/10 text-white/80 px-2 py-1 rounded-full border border-white/20"
+                                  >
+                                    {tech}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
+
+                            <p className="text-sm mt-2 text-left sm:text-right text-white/70 line-clamp-4">{project.description}</p>
                         </div>
 
-                        <div className="flex justify-end gap-8 sm:gap-20 w-full my-4">
+                        {/* Links Section - Fixed */}
+                        <div className="flex justify-end gap-8 sm:gap-20 w-full shrink-0">
                             <LinkDisplay link={project.link} repoLink={project.repoLink} />
                         </div>
                     </div>

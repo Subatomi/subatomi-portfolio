@@ -14,11 +14,11 @@ export default function TechStack() {
 
                     <p  data-animation="fade-in"  className="text-gray-400">
                         Hello! You can call me Theo. <br/><br/>
-                        I’m a Computer Science student with interests in Web & Mobile Development and AI/Machine Learning. I face challenging problems and continuously improve my technical skills. I adapt quickly and learn efficiently, while staying persistent when faced with difficult tasks.<br/><br/>
+                        I’m a Computer Science student with interests in Web & Mobile Development and AI/Machine Learning. I try to face challenging problems to continuously improve my technical skills and experience. I adapt quickly and learn efficiently, while staying persistent when faced with difficult tasks and problems.<br/><br/>
 
-                        My programming journey began in high school, driven by curiosity about web technologies and gaming after exploring applications and projects from GitHub. This early exposure sparked my interest in how software works under the hood and motivated me to pursue Computer Science.<br/><br/>
+                        My programming journey began in high school, driven by curiosity about web technologies and gaming after exploring applications and projects from GitHub. This early exposure sparked my interest in how software works under the hood and motivated me to pursue Computer Science for a bit of prestigue.<br/><br/>
 
-                        I am currently pursuing a Bachelor of Science in Computer Science at Cebu Institute of Technology-University, a DOST-SEI Scholarship recipient since 2022, and I am on track to graduate in May 2026.
+                        I am currently pursuing a Bachelor of Science in Computer Science at Cebu Institute of Technology-University, a DOST-SEI Scholar since 2022, and I am on track to graduate in May 2026.
                     </p>
                 </div>
 
