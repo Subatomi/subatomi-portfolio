@@ -9,67 +9,61 @@ import LinkDisplay from "./components/LinkDisplay"
 export default function Works() {
 
     useEffect(() => {
-        if (typeof window === "undefined") return;
-        let ctx = gsap.context(() => {
+    if (typeof window === "undefined") return;
 
-            gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-            function initGsap() {
-            if (window.innerWidth <= 640) {
-                ScrollTrigger.getAll().forEach(st => st.kill());
-                const panels = document.getElementsByClassName("panel");
-                for (let i = 0; i < panels.length; i++) {
-                    const el = panels[i] as HTMLElement;
-                    el.style.transform = "none";
-                    el.style.transition = "none";
-                }
-                return;
+    const ctx = gsap.context(() => {
+        const mm = gsap.matchMedia();
+
+        mm.add("(min-width: 1536px)", () => { // 2xl
+        initGsap("top top");
+        });
+
+        mm.add("(max-width: 1535px) and (min-width: 641px)", () => {
+        initGsap("10% top");
+        });
+
+        mm.add("(max-width: 640px)", () => {
+        ScrollTrigger.getAll().forEach(st => st.kill());
+        gsap.set(".panel", { clearProps: "all" });
+        });
+
+        function initGsap(startPoint: string) {
+        const boxes = document.getElementsByClassName("panel");
+        if (!boxes.length) return;
+
+        const container = document.querySelector(".works-container");
+        if (!container) return;
+
+        const rectLeft = container.getBoundingClientRect().left;
+        const parentWidth = boxes[0].parentElement?.getBoundingClientRect().width ?? 0;
+        const padding = parseInt(window.getComputedStyle(boxes[0]).padding) / 2;
+
+        const translateX =
+            boxes[0].getBoundingClientRect().width * boxes.length -
+            (rectLeft + parentWidth) +
+            padding;
+
+        gsap.to(".panel", {
+            x: -translateX,
+            ease: "none",
+            scrollTrigger: {
+            trigger: container,
+            start: startPoint,
+            end: `+=${translateX}`,
+            scrub: 1,
+            pin: true,
+            pinSpacing: true,
+            invalidateOnRefresh: true,
+            markers: true
             }
+        });
+        }
+    });
 
-            const boxes = document.getElementsByClassName("panel");
-            if (!boxes.length) return;
-
-            const container = document.querySelector(".works-container")!;
-            const rectLeft = container.getBoundingClientRect().left;
-            const parentWidth = boxes[0].parentElement!.getBoundingClientRect().width;
-            const padding = parseInt(window.getComputedStyle(boxes[0]).padding) / 2;
-
-            const translateX = boxes[0].getBoundingClientRect().width * boxes.length - (rectLeft + parentWidth) + padding;
-
-            gsap.to(".panel", {
-                x: -translateX,
-                ease: "none",
-                scrollTrigger: {
-                trigger: container,
-                start: "10% top",
-                end: `+=${translateX}`,
-                scrub: 1,
-                pin: true,
-                pinSpacing: true,
-                id: "work",
-                invalidateOnRefresh: true,
-                // markers: true,
-                },
-            });
-            }
-
-            initGsap();
-
-            const handleResize = () => {
-            ScrollTrigger.getAll().forEach(st => st.kill());
-            initGsap();
-            }
-
-            window.addEventListener("resize", handleResize);
-
-            return () => {
-            window.removeEventListener("resize", handleResize);
-            ScrollTrigger.getAll().forEach(st => st.kill());
-            }
-        })
-
-        return () => ctx.revert();
-    }, [])
+    return () => ctx.revert();
+    }, []);
 
 
     return(
@@ -80,7 +74,7 @@ export default function Works() {
             </div>
             <div className="flex h-auto sm:h-10/12 flex-col sm:flex-row sm:overflow-hidden w-90 sm:w-full works-list">
                     {config.projects.slice(0,5).map((project, index) => (
-                        <div key={project.id || index} className="panel max-w-2xl w-full h-screen sm:min-h-screen shrink-0 flex flex-col sm:border-r-2 border-b-2 sm:border-b-0 border-graybackground px-2 sm:px-15 py-4 sm:py-10">
+                        <div key={project.id || index} className="panel max-w-2xl w-full  sm:min-h-screen 2xl:min-h-[80vh] shrink-0 flex flex-col sm:border-r-2 border-b-2 sm:border-b-0 border-graybackground px-2 sm:px-15 py-4 sm:py-10">
                         {/* Header Section */}
                         <div className="flex flex-col sm:flex-row justify-between w-full mb-3 gap-2 shrink-0">
                             <h3 className="text-2xl sm:!text-6xl font-bold w-fit h-fit text-left">0{index+1}</h3>
@@ -99,7 +93,7 @@ export default function Works() {
                         <div className="flex flex-col overflow-hidden mb-3">
                             <p className="text-xs sm:text-sm text-white font-bold shrink-0">Technology Used:</p>
                             {project.technologies && project.technologies.length > 0 && (
-                              <div className="mt-1 sm:mt-2 flex flex-wrap gap-1 sm:gap-2 justify-start mb-2 sm:mb-3 shrink-0">
+                              <div className="mt-1 sm:mt-2 flex flex-wrap gap-1 sm:gap-2 justify-start sm:justify-s mb-2 sm:mb-3 shrink-0">
                                 {project.technologies.map((tech, idx) => (
                                   <span
                                     key={idx}
