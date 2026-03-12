@@ -56,7 +56,7 @@ export default function Works() {
             pin: true,
             pinSpacing: true,
             invalidateOnRefresh: true,
-            markers: true
+            // markers: true
             }
         });
         }
